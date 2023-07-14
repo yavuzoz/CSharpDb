@@ -44,6 +44,7 @@
             this.lstEmployee.Name = "lstEmployee";
             this.lstEmployee.Size = new System.Drawing.Size(158, 316);
             this.lstEmployee.TabIndex = 0;
+            this.lstEmployee.Click += new System.EventHandler(this.lstEmployee_Click);
             // 
             // btnList
             // 

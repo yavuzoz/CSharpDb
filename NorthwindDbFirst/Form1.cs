@@ -45,5 +45,15 @@ namespace NorthwindDbFirst
             db.SaveChanges();
             List();
         }
+
+        private void lstEmployee_Click(object sender, EventArgs e)
+        {
+            if(lstEmployee.SelectedIndex > -1)
+            {
+                Employee selectedEmployee = lstEmployee.SelectedItem as Employee;
+                MessageBox.Show($" first name : {selectedEmployee.FirstName} and last name :{selectedEmployee.LastName} and id ' s : {selectedEmployee.EmployeeID}");
+            }
+
+        }
     }
 }
