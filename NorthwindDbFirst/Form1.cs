@@ -1,4 +1,5 @@
 ﻿using NorthwindDbFirst.Models;
+using NorthwindDbFirst.SingletonPattern;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -22,8 +23,6 @@ namespace NorthwindDbFirst
         {
 
         }
-
-        NorthwindEntities db = new NorthwindEntities();
         private void btnList_Click(object sender, EventArgs e)
         {
             List();
@@ -31,6 +30,7 @@ namespace NorthwindDbFirst
 
         private void List()
         {
+            NorthwindEntities db = DBTool.DbInstance;
             lstEmployee.DataSource = db.Employees.ToList();
             lstEmployee.DisplayMember = "FirstName";
             lstEmployee.SelectedIndex = -1;
@@ -38,6 +38,7 @@ namespace NorthwindDbFirst
 
         private void btnAdd_Click(object sender, EventArgs e)
         {
+            NorthwindEntities db = DBTool.DbInstance;
             Employee employee = new Employee();
             employee.FirstName = txtName.Text;
             employee.LastName = txtSurname.Text;
