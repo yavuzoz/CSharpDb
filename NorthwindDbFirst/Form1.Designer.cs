@@ -31,8 +31,8 @@
             this.lstEmployee = new System.Windows.Forms.ListBox();
             this.btnList = new System.Windows.Forms.Button();
             this.btnAdd = new System.Windows.Forms.Button();
-            this.textBox1 = new System.Windows.Forms.TextBox();
-            this.textBox2 = new System.Windows.Forms.TextBox();
+            this.txtName = new System.Windows.Forms.TextBox();
+            this.txtSurname = new System.Windows.Forms.TextBox();
             this.FirstName = new System.Windows.Forms.Label();
             this.lastName = new System.Windows.Forms.Label();
             this.SuspendLayout();
@@ -63,20 +63,21 @@
             this.btnAdd.TabIndex = 2;
             this.btnAdd.Text = "Add";
             this.btnAdd.UseVisualStyleBackColor = true;
+            this.btnAdd.Click += new System.EventHandler(this.btnAdd_Click);
             // 
-            // textBox1
+            // txtName
             // 
-            this.textBox1.Location = new System.Drawing.Point(389, 164);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(184, 20);
-            this.textBox1.TabIndex = 3;
+            this.txtName.Location = new System.Drawing.Point(389, 164);
+            this.txtName.Name = "txtName";
+            this.txtName.Size = new System.Drawing.Size(184, 20);
+            this.txtName.TabIndex = 3;
             // 
-            // textBox2
+            // txtSurname
             // 
-            this.textBox2.Location = new System.Drawing.Point(389, 213);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(184, 20);
-            this.textBox2.TabIndex = 4;
+            this.txtSurname.Location = new System.Drawing.Point(389, 213);
+            this.txtSurname.Name = "txtSurname";
+            this.txtSurname.Size = new System.Drawing.Size(184, 20);
+            this.txtSurname.TabIndex = 4;
             // 
             // FirstName
             // 
@@ -103,8 +104,8 @@
             this.ClientSize = new System.Drawing.Size(800, 450);
             this.Controls.Add(this.lastName);
             this.Controls.Add(this.FirstName);
-            this.Controls.Add(this.textBox2);
-            this.Controls.Add(this.textBox1);
+            this.Controls.Add(this.txtSurname);
+            this.Controls.Add(this.txtName);
             this.Controls.Add(this.btnAdd);
             this.Controls.Add(this.btnList);
             this.Controls.Add(this.lstEmployee);
@@ -121,8 +122,8 @@
         private System.Windows.Forms.ListBox lstEmployee;
         private System.Windows.Forms.Button btnList;
         private System.Windows.Forms.Button btnAdd;
-        private System.Windows.Forms.TextBox textBox1;
-        private System.Windows.Forms.TextBox textBox2;
+        private System.Windows.Forms.TextBox txtName;
+        private System.Windows.Forms.TextBox txtSurname;
         private System.Windows.Forms.Label FirstName;
         private System.Windows.Forms.Label lastName;
     }

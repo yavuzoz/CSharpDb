@@ -35,5 +35,15 @@ namespace NorthwindDbFirst
             lstEmployee.DisplayMember = "FirstName";
             lstEmployee.SelectedIndex = -1;
         }
+
+        private void btnAdd_Click(object sender, EventArgs e)
+        {
+            Employee employee = new Employee();
+            employee.FirstName = txtName.Text;
+            employee.LastName = txtSurname.Text;
+            db.Employees.Add(employee);
+            db.SaveChanges();
+            List();
+        }
     }
 }
