@@ -1,11 +1,11 @@
-﻿using NorthwindDbFirst.Models;
+﻿using ListAndAdd.Models;
 using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace NorthwindDbFirst.SingletonPattern
+namespace ListAndAdd.SingletonPattern
 {
     class DBTool
     {
