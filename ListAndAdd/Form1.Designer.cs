@@ -36,6 +36,8 @@
             this.txtUnitPrice = new System.Windows.Forms.TextBox();
             this.cmbCatagories = new System.Windows.Forms.ComboBox();
             this.btnAddProducts = new System.Windows.Forms.Button();
+            this.btnDelete = new System.Windows.Forms.Button();
+            this.btnUpdate = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // lstProducts
@@ -98,7 +100,7 @@
             // 
             // btnAddProducts
             // 
-            this.btnAddProducts.Location = new System.Drawing.Point(338, 440);
+            this.btnAddProducts.Location = new System.Drawing.Point(116, 447);
             this.btnAddProducts.Name = "btnAddProducts";
             this.btnAddProducts.Size = new System.Drawing.Size(118, 45);
             this.btnAddProducts.TabIndex = 7;
@@ -106,11 +108,33 @@
             this.btnAddProducts.UseVisualStyleBackColor = true;
             this.btnAddProducts.Click += new System.EventHandler(this.btnAddProducts_Click);
             // 
+            // btnDelete
+            // 
+            this.btnDelete.Location = new System.Drawing.Point(311, 447);
+            this.btnDelete.Name = "btnDelete";
+            this.btnDelete.Size = new System.Drawing.Size(103, 45);
+            this.btnDelete.TabIndex = 8;
+            this.btnDelete.Text = "DeleteProduct";
+            this.btnDelete.UseVisualStyleBackColor = true;
+            this.btnDelete.Click += new System.EventHandler(this.btnDelete_Click);
+            // 
+            // btnUpdate
+            // 
+            this.btnUpdate.Location = new System.Drawing.Point(529, 447);
+            this.btnUpdate.Name = "btnUpdate";
+            this.btnUpdate.Size = new System.Drawing.Size(96, 45);
+            this.btnUpdate.TabIndex = 9;
+            this.btnUpdate.Text = "UpdateProduct";
+            this.btnUpdate.UseVisualStyleBackColor = true;
+            this.btnUpdate.Click += new System.EventHandler(this.btnUpdate_Click);
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 527);
+            this.Controls.Add(this.btnUpdate);
+            this.Controls.Add(this.btnDelete);
             this.Controls.Add(this.btnAddProducts);
             this.Controls.Add(this.cmbCatagories);
             this.Controls.Add(this.txtUnitPrice);
@@ -137,6 +161,8 @@
         private System.Windows.Forms.TextBox txtUnitPrice;
         private System.Windows.Forms.ComboBox cmbCatagories;
         private System.Windows.Forms.Button btnAddProducts;
+        private System.Windows.Forms.Button btnDelete;
+        private System.Windows.Forms.Button btnUpdate;
     }
 }
 

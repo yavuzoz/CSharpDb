@@ -32,6 +32,11 @@ namespace ListAndAdd
             cmbCatagories.DataSource = db.Categories.ToList();
             cmbCatagories.DisplayMember = "CategoryName";
             cmbCatagories.ValueMember = "CategoryID";
+
+            p = null;
+            txtProductName.Text = "";
+            txtUnitPrice.Text = "";
+            cmbCatagories.SelectedIndex = -1;
         }
 
         private void btnAddProducts_Click(object sender, EventArgs e)
@@ -46,14 +51,14 @@ namespace ListAndAdd
             ListProductAndCategories();
 
         }
-
+        Product p;
         private void lstProducts_Click(object sender, EventArgs e)
         {
             if(lstProducts.SelectedIndex > -1)
             {
                 try
                 {
-                    Product p = lstProducts.SelectedItem as Product;
+                    p = lstProducts.SelectedItem as Product;
                     txtProductName.Text = p.ProductName;
                     txtUnitPrice.Text = p.UnitPrice.ToString();
                     cmbCatagories.SelectedValue = p.CategoryID;
@@ -64,6 +69,65 @@ namespace ListAndAdd
                     lstProducts.SelectedIndex = -1;
                 }
                
+            }
+        }
+
+        private void btnDelete_Click(object sender, EventArgs e)
+        {
+            if (p != null)
+            {
+                try
+                {
+                    NorthwindEntities db = DBTool.DbInstance;
+                    db.Products.Remove(p);
+                    if(db.SaveChanges() > 0)
+                    {
+                        MessageBox.Show("product is successfull delete ! ");
+                    }
+                    else
+                    {
+                        MessageBox.Show("product not delete ! ");
+                    }
+                  
+                }
+                catch(Exception ex)
+                {
+                    MessageBox.Show(ex.Message);
+                }
+                finally
+                {
+                    ListProductAndCategories();
+                }
+            }
+        }
+
+        private void btnUpdate_Click(object sender, EventArgs e)
+        {
+            if (p != null)
+            {
+                try
+                {
+                    NorthwindEntities db = DBTool.DbInstance;
+                    p.ProductName=txtProductName.Text; 
+                    p.UnitPrice=Convert.ToDecimal(txtUnitPrice.Text);
+                    p.CategoryID=Convert.ToInt32(cmbCatagories.SelectedValue);
+                    if (db.SaveChanges() > 0)
+                    {
+                        MessageBox.Show("product is successfull update ! ");
+                    }
+                    else
+                    {
+                        MessageBox.Show("product not update ! ");
+                    }
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show(ex.Message);
+                }
+                finally
+                {
+                    ListProductAndCategories();
+                }
             }
         }
     }
