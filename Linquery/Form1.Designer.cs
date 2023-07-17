@@ -29,6 +29,7 @@
         private void InitializeComponent()
         {
             this.dgvProducts = new System.Windows.Forms.DataGridView();
+            this.btnWhere = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dgvProducts)).BeginInit();
             this.SuspendLayout();
             // 
@@ -40,11 +41,22 @@
             this.dgvProducts.Size = new System.Drawing.Size(633, 238);
             this.dgvProducts.TabIndex = 0;
             // 
+            // btnWhere
+            // 
+            this.btnWhere.Location = new System.Drawing.Point(190, 357);
+            this.btnWhere.Name = "btnWhere";
+            this.btnWhere.Size = new System.Drawing.Size(188, 62);
+            this.btnWhere.TabIndex = 1;
+            this.btnWhere.Text = "Where";
+            this.btnWhere.UseVisualStyleBackColor = true;
+            this.btnWhere.Click += new System.EventHandler(this.btnWhere_Click);
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(957, 557);
+            this.Controls.Add(this.btnWhere);
             this.Controls.Add(this.dgvProducts);
             this.Name = "Form1";
             this.Text = "Form1";
@@ -57,6 +69,7 @@
         #endregion
 
         private System.Windows.Forms.DataGridView dgvProducts;
+        private System.Windows.Forms.Button btnWhere;
     }
 }
 

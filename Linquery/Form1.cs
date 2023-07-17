@@ -31,5 +31,15 @@ namespace Linquery
         {
             dgvProducts.DataSource = db.Products.ToList();
         }
+
+        private void btnWhere_Click(object sender, EventArgs e)
+        {
+            dgvProducts.DataSource=db.Products.Where(product => product.UnitPrice > 20 && product.UnitPrice<30).Select(p => new
+            {
+                    ProductID=p.ProductID,
+                    ProductName=p.ProductName,
+                    ProductPrice =p.UnitPrice
+            }).ToList();
+        }
     }
 }
