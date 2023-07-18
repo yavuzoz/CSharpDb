@@ -30,6 +30,7 @@
         {
             this.dgvProducts = new System.Windows.Forms.DataGridView();
             this.btnWhere = new System.Windows.Forms.Button();
+            this.btnOrderBy = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dgvProducts)).BeginInit();
             this.SuspendLayout();
             // 
@@ -43,19 +44,30 @@
             // 
             // btnWhere
             // 
-            this.btnWhere.Location = new System.Drawing.Point(190, 357);
+            this.btnWhere.Location = new System.Drawing.Point(40, 339);
             this.btnWhere.Name = "btnWhere";
-            this.btnWhere.Size = new System.Drawing.Size(188, 62);
+            this.btnWhere.Size = new System.Drawing.Size(139, 62);
             this.btnWhere.TabIndex = 1;
             this.btnWhere.Text = "Where";
             this.btnWhere.UseVisualStyleBackColor = true;
             this.btnWhere.Click += new System.EventHandler(this.btnWhere_Click);
+            // 
+            // btnOrderBy
+            // 
+            this.btnOrderBy.Location = new System.Drawing.Point(217, 339);
+            this.btnOrderBy.Name = "btnOrderBy";
+            this.btnOrderBy.Size = new System.Drawing.Size(121, 62);
+            this.btnOrderBy.TabIndex = 2;
+            this.btnOrderBy.Text = "OrderBy";
+            this.btnOrderBy.UseVisualStyleBackColor = true;
+            this.btnOrderBy.Click += new System.EventHandler(this.btnOrderBy_Click);
             // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(957, 557);
+            this.Controls.Add(this.btnOrderBy);
             this.Controls.Add(this.btnWhere);
             this.Controls.Add(this.dgvProducts);
             this.Name = "Form1";
@@ -70,6 +82,7 @@
 
         private System.Windows.Forms.DataGridView dgvProducts;
         private System.Windows.Forms.Button btnWhere;
+        private System.Windows.Forms.Button btnOrderBy;
     }
 }
 
