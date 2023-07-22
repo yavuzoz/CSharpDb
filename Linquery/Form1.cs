@@ -50,5 +50,20 @@ namespace Linquery
                 p.UnitPrice
             }).ToList();
         }
-    }
+
+		private void button1_Click(object sender, EventArgs e)
+		{
+
+		}
+
+		private void btnCategoryName_Click(object sender, EventArgs e)
+		{
+            dgvProducts.DataSource = db.Products.Select(p => new
+            {
+                p.ProductName,
+                p.Category.CategoryName,
+                p.UnitPrice
+            }).ToList();
+		}
+	}
 }
