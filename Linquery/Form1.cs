@@ -65,5 +65,15 @@ namespace Linquery
                 p.UnitPrice
             }).ToList();
 		}
+
+		private void btnTake_Click(object sender, EventArgs e)
+		{
+			dgvProducts.DataSource = db.Products.OrderByDescending(p=>p.UnitPrice).Take(3).ToList();
+		}
+
+		private void btnSkip_Click(object sender, EventArgs e)
+		{
+            dgvProducts.DataSource = db.Products.OrderBy(p => p.UnitPrice).Skip(1).Take(6).ToList();
+		}
 	}
 }
