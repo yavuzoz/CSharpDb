@@ -34,6 +34,7 @@
 			this.btnCategoryName = new System.Windows.Forms.Button();
 			this.btnTake = new System.Windows.Forms.Button();
 			this.btnSkip = new System.Windows.Forms.Button();
+			this.btnFind = new System.Windows.Forms.Button();
 			((System.ComponentModel.ISupportInitialize)(this.dgvProducts)).BeginInit();
 			this.SuspendLayout();
 			// 
@@ -98,11 +99,22 @@
 			this.btnSkip.UseVisualStyleBackColor = true;
 			this.btnSkip.Click += new System.EventHandler(this.btnSkip_Click);
 			// 
+			// btnFind
+			// 
+			this.btnFind.Location = new System.Drawing.Point(800, 522);
+			this.btnFind.Name = "btnFind";
+			this.btnFind.Size = new System.Drawing.Size(116, 56);
+			this.btnFind.TabIndex = 7;
+			this.btnFind.Text = "Find";
+			this.btnFind.UseVisualStyleBackColor = true;
+			this.btnFind.Click += new System.EventHandler(this.btnFind_Click);
+			// 
 			// Form1
 			// 
 			this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
 			this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
 			this.ClientSize = new System.Drawing.Size(1436, 857);
+			this.Controls.Add(this.btnFind);
 			this.Controls.Add(this.btnSkip);
 			this.Controls.Add(this.btnTake);
 			this.Controls.Add(this.btnCategoryName);
@@ -126,6 +138,7 @@
 		private System.Windows.Forms.Button btnCategoryName;
 		private System.Windows.Forms.Button btnTake;
 		private System.Windows.Forms.Button btnSkip;
+		private System.Windows.Forms.Button btnFind;
 	}
 }
 

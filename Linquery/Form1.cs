@@ -75,5 +75,11 @@ namespace Linquery
 		{
             dgvProducts.DataSource = db.Products.OrderBy(p => p.UnitPrice).Skip(1).Take(6).ToList();
 		}
+
+		private void btnFind_Click(object sender, EventArgs e)
+		{
+            Product p = db.Products.Find(5);
+            MessageBox.Show(p.ProductName.ToString());
+		}
 	}
 }
